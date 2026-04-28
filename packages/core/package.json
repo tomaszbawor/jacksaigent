@@ -2,10 +2,10 @@
 	"name": "@bodnar/core",
 	"version": "0.0.1",
 	"type": "module",
+	"dependencies": {
+		"effect": "catalog:"
+	},
 	"exports": {
 		".": "./src/index.ts"
-	},
-	"dependencies": {
-		"effect": "4.0.0-beta.47"
 	}
 }

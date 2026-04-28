@@ -3,22 +3,29 @@
 	"version": "0.0.1",
 	"private": true,
 	"type": "module",
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": {
+		"": {
+			"name": "bodnar-monorepo"
+		},
+		"packages": [
+			"packages/*"
+		],
+		"catalog": {
+			"effect": "4.0.0-beta.47"
+		}
+	},
 	"scripts": {
 		"start": "bun run --filter @bodnar/cli start",
-		"typecheck": "bunx tsc --project tsconfig.json --noEmit",
+		"typecheck": "tsgo --project tsconfig.json --noEmit",
 		"lint": "bunx @biomejs/biome lint .",
 		"format": "bunx @biomejs/biome format --write .",
 		"check": "bunx @biomejs/biome check --write .",
-		"prepare": "lefthook install && effect-language-service patch"
+		"prepare": "lefthook install"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.11",
-		"@effect/language-service": "^0.85.0",
 		"@types/bun": "latest",
-		"lefthook": "^2.1.2",
-		"typescript": "^5.9.3"
+		"@typescript/native-preview": "latest",
+		"lefthook": "^2.1.2"
 	}
 }
