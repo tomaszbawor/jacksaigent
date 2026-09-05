@@ -23,7 +23,7 @@
 		"prepare": "lefthook install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.11",
+		"@biomejs/biome": "2.5.12",
 		"@types/bun": "latest",
 		"@typescript/native-preview": "latest",
 		"lefthook": "^2.1.2"
